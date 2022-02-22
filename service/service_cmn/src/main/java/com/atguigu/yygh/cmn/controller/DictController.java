@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
@@ -63,7 +64,9 @@ public class DictController {
     //根据dictCode获取下级节点
     @ApiOperation(value = "根据dictCode获取下级节点")
     @GetMapping("findByDictCode/{dictCode}")
-    public Result findByDictCode(@PathVariable String dictCode) {
+    public Result findByDictCode(@PathVariable String dictCode, HttpServletRequest request) {
+        StringBuffer requestURL = request.getRequestURL();
+        System.out.println("requestURL:" + requestURL);
         List<Dict> list = dictService.findByDictCode(dictCode);
         return Result.ok(list);
     }
