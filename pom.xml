@@ -37,6 +37,7 @@
         <aliyun.version>4.1.1</aliyun.version>
         <oss.version>3.9.1</oss.version>
         <jodatime.version>2.10.1</jodatime.version>
+        <tencentcloud.version>3.1.270</tencentcloud.version>
     </properties>
 
     <!--配置dependencyManagement锁定依赖的版本-->
@@ -125,6 +126,11 @@
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
                 <version>${jodatime.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencentcloudapi</groupId>
+                <artifactId>tencentcloud-sdk-java</artifactId>
+                <version>${tencentcloud.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

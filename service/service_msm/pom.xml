@@ -11,5 +11,11 @@
 
     <artifactId>service_msm</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.tencentcloudapi</groupId>
+            <artifactId>tencentcloud-sdk-java</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
